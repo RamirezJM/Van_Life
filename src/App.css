@@ -1,0 +1,78 @@
+
+body{
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+}
+
+header{
+
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--white);
+}
+header>a{
+  text-decoration: none;
+}
+h1{
+  color: #000000;
+  font-size: 1.8rem;
+ 
+}
+.link-list{
+   display: flex;
+   gap: 1em;
+   list-style-type: none;
+  }
+.nav-link{
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--soft-black);
+}
+
+.hero{
+  background-image: url('./assets/landing.png');
+  background-color: var(--gray);
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4em 1em;
+  gap: 1em;
+}
+.hero>h2, p{
+  color: #ffffff;
+}
+
+.hero>h2{
+  font-size: 2.3rem;
+}
+
+.cta-btn{
+  background-color: var(--orange);
+  color: #ffffff;
+  border: none;
+  width: 100%;
+  padding: 1em;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+footer{
+  background-color: var(--soft-black);
+  color: #aaaaaa;
+  text-align: center;
+  padding: 2em;
+}
+
+@media (min-width:700px){
+  header{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
