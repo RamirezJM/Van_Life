@@ -13,7 +13,10 @@
   --black: #161616;
   --green: #115e59;
   --orange2: #e17654;
-  
 
+}
+#root{
+  display: flex;
+  flex-direction: column;
 }
 

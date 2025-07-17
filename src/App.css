@@ -1,10 +1,12 @@
 
-body{
+
+body {
   font-family: 'Inter', sans-serif;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header{
+header {
 
   display: flex;
   flex-direction: column;
@@ -13,27 +15,35 @@ header{
   padding: 1em;
   background-color: var(--white);
 }
-header>a{
+
+header>a {
   text-decoration: none;
 }
-h1{
+
+h1 {
   color: #000000;
   font-size: 1.8rem;
- 
+
 }
-.link-list{
-   display: flex;
-   gap: 1em;
-   list-style-type: none;
-  }
-.nav-link{
+
+.link-list {
+  display: flex;
+  gap: 1em;
+  list-style-type: none;
+}
+
+.nav-link {
   text-decoration: none;
   font-size: 1.5rem;
   color: var(--soft-black);
 }
 
-.hero{
-  background-image: url('./assets/landing.png');
+main {
+  flex: 1;
+}
+
+.hero {
+  background-image: url('./assets/landing-lg.png');
   background-color: var(--gray);
   background-blend-mode: overlay;
   background-size: cover;
@@ -42,18 +52,22 @@ h1{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 4em 1em;
   gap: 1em;
+  min-height: 80vh;
 }
-.hero>h2, p{
+
+.hero>h2,
+p {
   color: #ffffff;
 }
 
-.hero>h2{
+.hero>h2 {
   font-size: 2.3rem;
 }
 
-.cta-btn{
+.cta-btn {
   background-color: var(--orange);
   color: #ffffff;
   border: none;
@@ -61,18 +75,65 @@ h1{
   padding: 1em;
   border-radius: 5px;
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
-footer{
+footer {
   background-color: var(--soft-black);
   color: #aaaaaa;
   text-align: center;
   padding: 2em;
+  margin-top: auto;
 }
 
-@media (min-width:700px){
-  header{
+/***  about  ***/
+
+.about-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-section>img{
+  width: 100%;
+  order: -1;
+}
+.about-info{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em 3em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.about-info>p{
+  color: var(--black);
+}
+
+.about-cta{
+  background-color: var(--cream);
+  padding: 2em;
+  border-radius: 5px;
+}
+
+.about-cta>button{
+  background-color: var(--black);
+  padding: 1em 2em;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+
+@media (min-width:700px) {
+  header {
     flex-direction: row;
     justify-content: space-between;
+  }
+  .hero{
+    padding: 4em;
+  }
+  .cta-btn{
+    width: fit-content;
   }
 }
