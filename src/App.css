@@ -80,10 +80,13 @@ p {
 
 footer {
   background-color: var(--soft-black);
-  color: #aaaaaa;
+  
   text-align: center;
   padding: 2em;
   margin-top: auto;
+}
+footer>p{
+  color: #aaaaaa;
 }
 
 /***  about  ***/
@@ -124,11 +127,117 @@ footer {
   margin-top: 1em;
 }
 
+/*   vans  */
 
+.vans-section{
+  width: 90%;
+  max-width: 1000px;
+  padding: 2em;
+  margin: 0 auto;
+}
+.vans-container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2em;
+}
+
+.van-card > a{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  text-decoration: none;
+}
+.van-image{
+  width: 100%;
+  border-radius: 5px;
+  grid-column: 1 / -1;
+}
+
+.van-title{
+  grid-column: 1 / 2;
+  justify-items: start;
+  
+}
+.van-price{
+  grid-column: 2 / 3;
+  justify-self: end;
+  color: #161616;
+}
+
+.van-card i, .van-info i{
+  border: none;
+  border-radius: 5px;
+  padding: .5em 1em;
+  
+}
+
+.van-type.selected {
+    color: #FFEAD0;
+}
+
+.van-type.simple:hover, .van-type.simple.selected {
+    background-color: #E17654;
+}
+
+.van-type.rugged:hover, .van-type.rugged.selected {
+    background-color: #115E59;
+}
+
+.van-type.luxury:hover, .van-type.luxury.selected {
+    background-color: #161616;
+}
+
+/*   van details*/
+
+.van-details-section{
+  width: 90%;
+  padding: 1em;
+  margin: 0 auto;
+}
+.van-details-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.van-details-container>img{
+  order: -1;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.van-info{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+}
+.van-info>h2, p{
+  color: #161616;
+}
+
+.van-info>i{
+  width: fit-content;
+  order: -1;
+}
+
+.van-info>button{
+  background-color: var(--orange);
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  color: #ffffff;
+  font-weight: 600;
+}
+ 
 @media (min-width:700px) {
   header {
     flex-direction: row;
     justify-content: space-between;
+  }
+  nav{
+    margin-right: 3em;
   }
   .hero{
     padding: 4em;

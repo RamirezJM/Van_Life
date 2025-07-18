@@ -12,6 +12,9 @@ export default function Header(){
           <li>
             <Link to='/vans' className="nav-link">Vans</Link>
           </li>
+         {/*  <li>
+            <Link to='/vans/:id' className="nav-link">Vans</Link>
+          </li> */}
         </ul>
       </nav>
     </header>
