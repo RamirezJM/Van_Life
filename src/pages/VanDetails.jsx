@@ -54,7 +54,7 @@ export default function VanDetails(){
       <div className="van-details-container">
         <div className="van-info">
           <h2>{van.name}</h2>
-          <i className={`van-type ${van.type} selected`}>{van.type}</i>
+          <i className={`van-type ${van.type} selected`}>{van.type.toUpperCase()}</i>
           <p>{van.price}<span>/day</span></p>
           <p>{van.description}</p>
           <button>Rent this Van</button>

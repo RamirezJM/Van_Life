@@ -230,6 +230,16 @@ footer>p{
   color: #ffffff;
   font-weight: 600;
 }
+
+/*  host ***/
+
+.host-nav>ul{
+  display: flex;
+  
+}
+
+
+
  
 @media (min-width:700px) {
   header {
