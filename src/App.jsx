@@ -16,14 +16,14 @@ function App() {
     <>
       <main>
         <Routes>
-          <Route element={<Layout />}>
-            <Route path='/' element={<Home />} />
+          <Route path='/' element={<Layout />}>
+            <Route index element={<Home />} />
             <Route path='about' element={<About />} />
             <Route path='vans' element={<Van />} />
             <Route path='vans/:id' element={<VanDetails />} />
 
             <Route path='host' element={<HostLayout />}>
-              <Route path='host' element={<Dashboard />} />
+              <Route index element={<Dashboard />} />
               <Route path='income' element={<Income />} />
               <Route path='reviews' element={<Reviews />} />
             </Route>
