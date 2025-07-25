@@ -203,7 +203,7 @@ footer>p{
   padding: 1em;
   margin: 0 auto;
 }
-.van-details-container{
+.van-details-container, .host-van-details-container{
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -262,8 +262,43 @@ footer>p{
     color: #161616;
 }
 
+/*  host vans*/
 
+.host-vans-section{
+  width: 90%;
+  margin: 0 auto;
+  padding: 1em;
+}
+.host-vans-list{
+  display: flex;
+ flex-direction: column;
+ 
+  gap: 2em;
+  align-items: center;
+ 
+}
 
+.host-vans-list a{
+  text-decoration: none;
+}
+.host-van-single{
+  display: flex;
+  flex-direction: column;
+
+}
+.host-van-single>img{
+  width: 300px;
+  border-radius: 5px;
+}
+
+.host-van-details-container>img{
+  width: 50%;
+}
+
+.van-details-nav{
+  display: flex;
+  gap: 1em;
+}
  
 @media (min-width:700px) {
   header {

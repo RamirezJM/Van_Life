@@ -16,6 +16,9 @@ export default function HostLayout() {
           <li>
             <NavLink to='reviews' className={({isActive}) => isActive ? 'host-link-active' : 'host-link'}>Reviews</NavLink>
           </li>
+           <li>
+            <NavLink to='vans' className={({isActive}) => isActive ? 'host-link-active' : 'host-link'}>Vans</NavLink>
+          </li>
         </ul>
       </nav>
       <Outlet/>

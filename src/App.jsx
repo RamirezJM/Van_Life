@@ -8,7 +8,13 @@ import Layout from './components/Layout'
 import Dashboard from './pages/host/Dashboard'
 import Income from './pages/host/Income'
 import Reviews from './pages/host/Reviews'
+import HostVans from './pages/host/HostVans'
+import HostVansDetails from './pages/host/HostVansDetails'
 import HostLayout from './HostLayout'
+import HostVanInfo from './pages/host/HostVansInfo'
+import HostVanPricing from './pages/host/HostVanPricing'
+import HostVanPhotos from './pages/host/HostVanPhotos'
+
 
 function App() {
 
@@ -26,6 +32,13 @@ function App() {
               <Route index element={<Dashboard />} />
               <Route path='income' element={<Income />} />
               <Route path='reviews' element={<Reviews />} />
+              <Route path='vans' element={<HostVans />} />
+              <Route path='vans/:id' element={<HostVansDetails />}>
+                <Route index element={<HostVanInfo />} />
+                <Route path='pricing' element={<HostVanPricing />} />
+                <Route path='photos' element={<HostVanPhotos />} />
+
+              </Route>
             </Route>
           </Route>
         </Routes>
