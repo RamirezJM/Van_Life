@@ -21,6 +21,7 @@ export default function HostVansDetails(){
       }
       const data = await res.json()
       setVan(data.vans)  
+      console.log(data.vans)
       
     } catch (error) {
         console.error('Error:', error)
@@ -64,7 +65,8 @@ export default function HostVansDetails(){
         <NavLink to='pricing' className={({isActive}) => isActive ? 'host-link-active' : 'host-link'}>Pricing</NavLink>
         <NavLink to='photos' className={({isActive}) => isActive ? 'host-link-active' : 'host-link'}>Photos</NavLink>
       </nav>
-    <Outlet/>
+    <Outlet context={van}/>
+    
     </section>
 </>
   )

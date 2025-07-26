@@ -1,3 +1,11 @@
+import { useOutletContext } from "react-router-dom"
+
 export default function Pricing(){
-  return <h1>pricing</h1>
+  const {price} = useOutletContext()
+  
+  return (
+    <p>{price}</p>
+
+  )
+
 }

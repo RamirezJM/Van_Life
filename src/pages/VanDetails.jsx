@@ -22,7 +22,7 @@ export default function VanDetails(){
           throw new Error(`HTTP error: ${res.status}`)
         }
         const data = await res.json()
-        console.log(data)
+        
         setVan(data.vans)
       } catch (error) {
         setError(error)
