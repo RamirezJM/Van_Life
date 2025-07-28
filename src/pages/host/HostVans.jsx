@@ -34,7 +34,8 @@ export default function HostVans(){
   }
 
   const vansElement = vans.map(van => (
-    <Link to={`/host/vans/${van.id}`}
+   /*  <Link to={`/host/vans/${van.id}`} */
+    <Link to={van.id}
     key={van.id}
     className="host-vans-link">
       <article className="host-van-single" key={van.id}>

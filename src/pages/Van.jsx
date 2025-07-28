@@ -45,7 +45,8 @@ export default function Van() {
 
   const vansElement = filterVans.map(van => (
     <div key={van.id} className='van-card'>
-      <Link to={`/vans/${van.id}`}>
+{/*       <Link to={`/vans/${van.id}`}> */}
+          <Link to={van.id}>
         <img src={van.imageUrl} alt={van.name}  className='van-image'/>
         <h3 className='van-title'>{van.name}</h3>
         <p className='van-price'>{van.price}<span>/day</span></p>
@@ -58,10 +59,17 @@ export default function Van() {
     <section className='vans-section'>
       <h1>Explore our van options</h1>
       <nav className='vans-nav'>
-        <button onClick={() => {setSearchParams({type: 'simple'})}}>Simple</button>
-        <button onClick={() => {setSearchParams({type: 'rugged'})}}>Rugged</button>
-        <button onClick={() => {setSearchParams({type: 'luxury'})}}>Luxury</button>
-        <button onClick={() => {setSearchParams({})}}>Clear filters</button>
+        <button onClick={() => {setSearchParams({type: 'simple'})}} 
+          className={`van-type simple ${typeFilter === "simple" ? "selected" : ""}`}>Simple</button>
+
+        <button onClick={() => {setSearchParams({type: 'rugged'})}} 
+          className={`van-type rugged ${typeFilter === "rugged" ? "selected" : ""}`}>Rugged</button>
+        
+        <button onClick={() => {setSearchParams({type: 'luxury'})}}
+          className={`van-type luxury ${typeFilter === "luxury" ? "selected" : ""}`}>Luxury</button>
+        
+        {typeFilter ? (<button onClick={() => {setSearchParams({})}}>Clear filters</button>) : null}
+        
         
          {/* <Link to='?type=simple' className='van-type simple'>Simple</Link>
          <Link to='?type=rugged' className='van-type rugged'>Rugged</Link>
