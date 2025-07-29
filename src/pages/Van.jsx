@@ -46,7 +46,12 @@ export default function Van() {
   const vansElement = filterVans.map(van => (
     <div key={van.id} className='van-card'>
 {/*       <Link to={`/vans/${van.id}`}> */}
-          <Link to={van.id}>
+          <Link to={van.id}
+           state={{ 
+                    search: `?${searchParams.toString()}`, 
+                    type: typeFilter 
+                }}
+          >
         <img src={van.imageUrl} alt={van.name}  className='van-image'/>
         <h3 className='van-title'>{van.name}</h3>
         <p className='van-price'>{van.price}<span>/day</span></p>

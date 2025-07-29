@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import { useParams , useLocation} from "react-router-dom"
 import { useState, useEffect } from "react"
 
 
@@ -8,8 +8,10 @@ export default function VanDetails(){
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   
+  const location = useLocation()
   const params = useParams()
   const vanId = params.id
+
 
   
   useEffect(() => {
@@ -47,7 +49,8 @@ export default function VanDetails(){
     return <p>Van no encontrada!</p>
   }
 
-  
+   const search = location.state?.search || ""
+    const type = location.state?.type || "all"
   
   return(
     <section className="van-details-section">

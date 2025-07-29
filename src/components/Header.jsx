@@ -1,4 +1,5 @@
 import { NavLink, Link } from "react-router-dom"
+import user from '../assets/user.svg'
 
 export default function Header(){
   
@@ -16,6 +17,11 @@ export default function Header(){
           </li>
           <li>
             <NavLink to='vans' className={({isActive}) => isActive ? 'nav-link-active' : 'nav-link'}>Vans</NavLink>
+          </li>
+           <li>
+            <Link to='login' className='user-logo'>
+            <img src={user} alt= 'user logo' />
+            </Link>
           </li>
        
         </ul>

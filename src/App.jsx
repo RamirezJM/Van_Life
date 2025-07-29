@@ -14,6 +14,8 @@ import HostLayout from './HostLayout'
 import HostVanInfo from './pages/host/HostVansInfo'
 import HostVanPricing from './pages/host/HostVanPricing'
 import HostVanPhotos from './pages/host/HostVanPhotos'
+import Page404 from './pages/Page404'
+import Login from './pages/Login'
 
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
             <Route path='about' element={<About />} />
             <Route path='vans' element={<Van />} />
             <Route path='vans/:id' element={<VanDetails />} />
+            <Route path='login' element={<Login/>}/>
 
             <Route path='host' element={<HostLayout />}>
               <Route index element={<Dashboard />} />
@@ -40,6 +43,7 @@ function App() {
 
               </Route>
             </Route>
+            <Route path='*' element={ <Page404/>}/>
           </Route>
         </Routes>
       </main>
